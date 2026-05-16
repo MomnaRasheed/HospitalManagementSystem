@@ -20,17 +20,20 @@ public Doctor(String name,int Id) {                     //overloading constructo
 setName(name);
 setId(Id);
 }
-public Doctor(String name,int id, String Specialization,double fee) {    //overloading constructor 2
+public Doctor(String name,int id, String Specialization,double fee) {      //overloading constructor 2
+	setName(name);
+	setId(id);
 	this.specialization=Specialization;
 	this.fee=fee;
 }
-@Override                                                    //override base classmethod(getRole)
+@Override                                        //override base classmethod(getRole)(Function ovverriding)
 public String getRole() {
 	return "Doctor";
 	
 }
-@Override                                                    //override base class method(displayInfo)
+@Override                                         //override base class method(displayInfo)(Polymorphism)
 public void displayInfo() {
+	super.displayInfo();
 	System.out.println("specialization: " + specialization);
 	System.out.println("Consultation Fee: " + fee);
 }
