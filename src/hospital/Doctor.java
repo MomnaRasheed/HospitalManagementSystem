@@ -26,7 +26,7 @@ public Doctor(String name,int id, String Specialization,double fee) {      //ove
 	this.specialization=Specialization;
 	this.fee=fee;
 }
-@Override                                        //override base classmethod(getRole)(Function ovverriding)
+@Override                                        //override base classmethod(getRole)(Function overriding)
 public String getRole() {
 	return "Doctor";
 	
