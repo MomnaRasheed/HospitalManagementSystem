@@ -8,6 +8,31 @@ private ArrayList<Checkup> checkups;
 private ArrayList<Bill> bills;
 private ArrayList<Room> rooms;
 
+//Methods for all fields in MAinGUi
+public ArrayList<Patient> getPatients() {
+    return patients;
+}
+
+public ArrayList<Doctor> getDoctors() {
+    return doctors;
+}
+
+public ArrayList<Appointment> getAppointments() {
+    return appointments;
+}
+
+public ArrayList<Checkup> getCheckups() {
+    return checkups;
+}
+
+public ArrayList<Bill> getBills() {
+    return bills;
+}
+
+public ArrayList<Room> getRooms() {
+    return rooms;
+}
+
 public Hospital() {
 	patients=new ArrayList<>();
 	doctors=new ArrayList<>();
