@@ -572,7 +572,7 @@ public class MainGUI extends JFrame{
 
 		    deleteBtn.addActionListener(new ActionListener() {
 		        public void actionPerformed(ActionEvent e) {
-		            try {
+		            try {                                                      // error handling
 		                int id = Integer.parseInt(idField.getText());
 		                hospital.deleteCheckup(id);
 		                outputArea.append("Checkup deleted!\n");
@@ -646,7 +646,7 @@ public class MainGUI extends JFrame{
 
 		    addBtn.addActionListener(new ActionListener() {
 		        public void actionPerformed(ActionEvent e) {
-		            try {
+		            try {                                                              // error handlimg (try catch)
 		                int id = Integer.parseInt(idField.getText());
 		                String patient = patientField.getText();
 		                double checkupFee = Double.parseDouble(
@@ -666,7 +666,7 @@ public class MainGUI extends JFrame{
 		                idField.setText(""); patientField.setText("");
 		                checkupFeeField.setText(""); medicineFeeField.setText("");
 		                daysField.setText(""); chargesField.setText("");
-		            } catch(NumberFormatException ex) {
+		            } catch(NumberFormatException ex) {                  
 		                JOptionPane.showMessageDialog(dialog,
 		                    "Please enter valid numbers!");
 		            }
@@ -685,7 +685,7 @@ public class MainGUI extends JFrame{
 		                    JOptionPane.showMessageDialog(dialog,
 		                        "Bill not found!");
 		                }
-		            } catch(NumberFormatException ex) {
+		            } catch(NumberFormatException ex) {                 // error handling
 		                JOptionPane.showMessageDialog(dialog,
 		                    "Please enter valid ID!");
 		            }

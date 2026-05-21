@@ -41,7 +41,11 @@ public int getPhone(){
 	return phone;
 }
 public void setPhone(int phone) {
-	this.phone=phone;
+    if(phone <= 0) {
+        System.out.println("Invalid phone!");
+    } else {
+        this.phone = phone;
+    }
 }
 
 
