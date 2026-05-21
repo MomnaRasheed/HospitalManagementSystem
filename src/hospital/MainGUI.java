@@ -8,7 +8,7 @@ public class MainGUI extends JFrame{
 	public MainGUI() {                              //Constructor
 		hospital=new Hospital();
 		setTitle("Hospital Management System");
-		setSize(500,450);
+		setSize(700,650);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		
@@ -30,7 +30,7 @@ public class MainGUI extends JFrame{
 				centerPanel.setLayout(new GridLayout(6,1,5,5));
 				centerPanel.setBackground(Color.BLACK);
 				centerPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-				centerPanel.setPreferredSize(new Dimension(250,300));
+				centerPanel.setPreferredSize(new Dimension(400,480));
 				
 				//create buttons
 				JButton patientBtn=new JButton("Manage Patients");
@@ -44,27 +44,27 @@ public class MainGUI extends JFrame{
 				Color darkBlue=new Color(0,51,102);
 				patientBtn.setBackground(darkBlue);
 				patientBtn.setForeground(Color.WHITE);
-				patientBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				patientBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 				doctorBtn.setBackground(darkBlue);
 				doctorBtn.setForeground(Color.WHITE);
-				doctorBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				doctorBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 				appointmentBtn.setBackground(darkBlue);
 				appointmentBtn.setForeground(Color.WHITE);
-				appointmentBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				appointmentBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 				checkupBtn.setBackground(darkBlue);
 				checkupBtn.setForeground(Color.WHITE);
-				checkupBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				checkupBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 				billBtn.setBackground(darkBlue);
 				billBtn.setForeground(Color.WHITE);
-				billBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				billBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 				roomBtn.setBackground(darkBlue);
 				roomBtn.setForeground(Color.WHITE);
-				roomBtn.setFont(new Font("Times New Roman",Font.BOLD,14));
+				roomBtn.setFont(new Font("Times New Roman",Font.BOLD,18));
 				
 //adding buttons to panel
 		centerPanel.add(patientBtn);
@@ -124,12 +124,12 @@ public class MainGUI extends JFrame{
 	// display of patient button
 		public void openPatientWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Patients", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(650, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
 		    // Input Panel
-		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 10, 15));
 
 		    JLabel nameLabel = new JLabel("Name:");
 		    JTextField nameField = new JTextField();
@@ -249,11 +249,11 @@ public class MainGUI extends JFrame{
 	// for doctor button
 		public void openDoctorWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Doctors", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(650, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
-		    JPanel inputPanel = new JPanel(new GridLayout(4, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 10, 15));
 
 		    JLabel nameLabel = new JLabel("Name:");
 		    JTextField nameField = new JTextField();
@@ -366,11 +366,11 @@ public class MainGUI extends JFrame{
 		// for Appointment btn
 		public void openAppointmentWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Appointments", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(600, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
-		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 10, 15));
 
 		    JLabel appNoLabel = new JLabel("Appointment No:");
 		    JTextField appNoField = new JTextField();
@@ -481,11 +481,11 @@ public class MainGUI extends JFrame{
 		//for checkup btn
 		public void openCheckupWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Checkups", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(600, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
-		    JPanel inputPanel = new JPanel(new GridLayout(7, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(5,2, 10, 15));
 
 		    JLabel idLabel = new JLabel("Checkup ID:");
 		    JTextField idField = new JTextField();
@@ -605,11 +605,11 @@ public class MainGUI extends JFrame{
 		//for bill btn
 		public void openBillWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Bills", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(600, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
-		    JPanel inputPanel = new JPanel(new GridLayout(6, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(6, 2, 10, 15));
 
 		    JLabel idLabel = new JLabel("Bill ID:");
 		    JTextField idField = new JTextField();
@@ -624,12 +624,18 @@ public class MainGUI extends JFrame{
 		    JLabel chargesLabel = new JLabel("Charges Per Day:");
 		    JTextField chargesField = new JTextField();
 
-		    inputPanel.add(idLabel); inputPanel.add(idField);
-		    inputPanel.add(patientLabel); inputPanel.add(patientField);
-		    inputPanel.add(checkupFeeLabel); inputPanel.add(checkupFeeField);
-		    inputPanel.add(medicineFeeLabel); inputPanel.add(medicineFeeField);
-		    inputPanel.add(daysLabel); inputPanel.add(daysField);
-		    inputPanel.add(chargesLabel); inputPanel.add(chargesField);
+		    inputPanel.add(idLabel); 
+		    inputPanel.add(idField);
+		    inputPanel.add(patientLabel);
+		    inputPanel.add(patientField);
+		    inputPanel.add(checkupFeeLabel);
+		    inputPanel.add(checkupFeeField);
+		    inputPanel.add(medicineFeeLabel);
+		    inputPanel.add(medicineFeeField);
+		    inputPanel.add(daysLabel);
+		    inputPanel.add(daysField);
+		    inputPanel.add(chargesLabel); 
+		    inputPanel.add(chargesField);
 
 		    JPanel btnPanel = new JPanel();
 		    JButton addBtn = new JButton("Add");
@@ -726,11 +732,11 @@ public class MainGUI extends JFrame{
 		//for room btn
 		public void openRoomWindow() {
 		    JDialog dialog = new JDialog(this, "Manage Rooms", true);
-		    dialog.setSize(500, 400);
+		    dialog.setSize(600, 550);
 		    dialog.setLocationRelativeTo(null);
 		    dialog.setLayout(new BorderLayout());
 
-		    JPanel inputPanel = new JPanel(new GridLayout(3, 2, 5, 5));
+		    JPanel inputPanel = new JPanel(new GridLayout(5, 2, 10, 15));
 
 		    JLabel roomNoLabel = new JLabel("Room No:");
 		    JTextField roomNoField = new JTextField();
